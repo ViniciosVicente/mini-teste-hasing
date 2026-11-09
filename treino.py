@@ -70,3 +70,23 @@ numeros.add(50);
 
 # Mostre o conjunto completo com print().
 # print(numeros);
+
+# Aula 2 — Parte 2: União e interseção
+javascript = {1, 2, 3, 7}
+python = {2, 3, 4, 5}
+java = {5, 6, 7}
+
+# Qual será o resultado de javascript | python?
+
+# resultado = javascript | python;
+# print(resultado) Será {1,2,3,4,5,7}
+
+# Qual será o resultado de javascript & python?
+# resultado = javascript & python;
+# print(resultado); será {2,3}
+
+# Qual será o resultado de python | java?
+# resultado = java | python; print(resultado);  SERÁ {2, 3, 4, 5, 6, 7}
+
+# Qual será o resultado de javascript & java?
+# resultado = java & javascript; print(resultado); será {7}

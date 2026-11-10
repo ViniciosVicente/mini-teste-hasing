@@ -90,3 +90,24 @@ java = {5, 6, 7}
 
 # Qual será o resultado de javascript & java?
 # resultado = java & javascript; print(resultado); será {7}
+
+# Exercícios de splint e splintlines
+
+texto = """Eu estudo Python.
+Python é interessante.
+Eu gosto de programação."""
+
+# 1. Utilize .splitlines() para separar as linhas.
+linhas = texto.splitlines();
+
+# 2. Mostre as linhas utilizando print().
+print(linhas);
+
+# 3. Utilize um for para percorrer cada linha.
+for percorre in linhas:
+# 4. Dentro do for, utilize .split() para separar as palavras.
+    separar = percorre.split();
+    print(separar);
+# 5. Mostre cada palavra individualmente.
+    for palavra in percorre:
+        print(palavra);

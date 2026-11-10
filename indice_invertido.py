@@ -1,3 +1,5 @@
+import string
+
 def construir_indice(texto):
 # Recebe um texto com várias linhas.
 # Retorna um dicionário: palavra -> conjunto de linhas.
@@ -6,13 +8,15 @@ def construir_indice(texto):
     for numero, linhas_textos in enumerate(linhas, start = 1):
         
         splin_palavra = linhas_textos.split();
-        for palavra in splin_palavra:
         
+        for palavra in splin_palavra:
+            palavra = palavra.lower();
+            palavra = palavra.strip(string.punctuation);
+            
             if palavra not in infor:
                 infor[palavra] = set();
             infor[palavra].add(numero);
 
-    print(infor);
     return infor
 
 

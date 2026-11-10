@@ -93,21 +93,46 @@ java = {5, 6, 7}
 
 # Exercícios de splint e splintlines
 
+# texto = """Eu estudo Python.
+# Python é interessante.
+# Eu gosto de programação."""
+
+# 1. Utilize .splitlines() para separar as linhas.
+# linhas = texto.splitlines();
+
+# 2. Mostre as linhas utilizando print().
+#print(linhas);
+
+# 3. Utilize um for para percorrer cada linha.
+# for percorre in linhas:
+# 4. Dentro do for, utilize .split() para separar as palavras.
+# separar = percorre.split();
+#    print(separar);
+# 5. Mostre cada palavra individualmente.
+#    for palavra in percorre:
+#        print(palavra);
+
+#------------------------
+
+# Parte 2: Descobrindo o número de cada linha
+
 texto = """Eu estudo Python.
 Python é interessante.
 Eu gosto de programação."""
 
-# 1. Utilize .splitlines() para separar as linhas.
-linhas = texto.splitlines();
+# Separe as linhas usando .splitlines().
+# Utilize enumerate() começando em 1.
+# Percorra as palavras de cada linha usando .split().
+# Mostre o número da linha e cada palavra.
+separar_linhas = texto.splitlines();
+infor={};
+for numero, linha in enumerate(separar_linhas, start = 1):
+    splin_palavra = linha.split();
+    for palavra in splin_palavra:
 
-# 2. Mostre as linhas utilizando print().
-print(linhas);
+        if palavra not in infor:
+            infor[palavra] = set();
+        
+        infor[palavra].add(numero);
 
-# 3. Utilize um for para percorrer cada linha.
-for percorre in linhas:
-# 4. Dentro do for, utilize .split() para separar as palavras.
-    separar = percorre.split();
-    print(separar);
-# 5. Mostre cada palavra individualmente.
-    for palavra in percorre:
-        print(palavra);
+print(infor)

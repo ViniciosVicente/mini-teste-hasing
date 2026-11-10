@@ -1,8 +1,7 @@
 import string
 
 def construir_indice(texto):
-# Recebe um texto com várias linhas.
-# Retorna um dicionário: palavra -> conjunto de linhas.
+
     infor = {}
     linhas = texto.splitlines();
     for numero, linhas_textos in enumerate(linhas, start = 1):
@@ -18,7 +17,6 @@ def construir_indice(texto):
             infor[palavra].add(numero);
 
     return infor
-
 
 def buscar(indice, palavra):
 # Retorna uma lista ordenada com as linhas da palavra.

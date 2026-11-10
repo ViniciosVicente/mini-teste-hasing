@@ -115,21 +115,20 @@ java = {5, 6, 7}
 #------------------------
 
 # Parte 2: Descobrindo o número de cada linha
+import string
 
 texto = """Eu estudo Python.
 Python é interessante.
 Eu gosto de programação."""
 
-# Separe as linhas usando .splitlines().
-# Utilize enumerate() começando em 1.
-# Percorra as palavras de cada linha usando .split().
-# Mostre o número da linha e cada palavra.
 separar_linhas = texto.splitlines();
 infor={};
 for numero, linha in enumerate(separar_linhas, start = 1):
     splin_palavra = linha.split();
     for palavra in splin_palavra:
-
+        palavra = palavra.lower();
+        palavra = palavra.strip(string.punctuation);
+        
         if palavra not in infor:
             infor[palavra] = set();
         

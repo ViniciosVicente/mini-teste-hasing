@@ -5,3 +5,7 @@ texto = (
 "Python e algoritmos"
 )
 indice = construir_indice(texto)
+print(indice);
+
+busca = buscar(indice, "java");
+print(busca);

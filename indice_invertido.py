@@ -11,6 +11,9 @@ def construir_indice(texto):
         for palavra in splin_palavra:
             palavra = palavra.lower();
             palavra = palavra.strip(string.punctuation);
+
+            if not palavra:
+                continue
             
             if palavra not in infor:
                 infor[palavra] = set();
@@ -19,9 +22,15 @@ def construir_indice(texto):
     return infor
 
 def buscar(indice, palavra):
-# Retorna uma lista ordenada com as linhas da palavra.
-    
-    pass
+    palavra = palavra.lower();
+    palavra = palavra.strip(string.punctuation);
+
+    if palavra not in indice:
+        return [];
+
+    resultado = sorted(indice[palavra]);
+
+    return resultado
 
 def buscar_e(indice, palavras):
 # Retorna as linhas que contêm TODAS as palavras.

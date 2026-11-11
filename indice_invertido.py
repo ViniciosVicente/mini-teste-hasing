@@ -34,21 +34,32 @@ def buscar(indice, palavra):
 
 def buscar_e(indice, palavras):
 
+    if not palavras:
+        return [];
+    
     resultado = indice[palavras[0]];
 
     for palavra in palavras[1:]:
 
         resultado = resultado & indice[palavra];
-
+    
     resultado_e = sorted(resultado);
     return resultado_e
         
-
-
-    
-    
     
 def buscar_ou(indice, palavras):
 
-    pass
+    if not palavras:
+        return [];
+
+    resultado = indice[palavras[0]];
+
+    for palavra in palavras[1:]:
+
+        resultado = resultado or indice[palavra];
+
+    resultado_ou = sorted(resultado);
+
+    return resultado;
+    
 

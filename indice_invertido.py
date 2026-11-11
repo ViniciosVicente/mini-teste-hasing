@@ -40,7 +40,7 @@ def buscar_e(indice, palavras):
     primeira_palavra = palavras[0].lower();
     primeira_palavra = primeira_palavra.strip(string.punctuation);
 
-    resultado = indice[primeira_palavra];
+    resultado = indice.get(palavra, set())
 
     for palavra in palavras[1:]:
         palavra = palavra.lower();
@@ -58,7 +58,7 @@ def buscar_ou(indice, palavras):
     primeira_palavra = palavras[0].lower();
     primeira_palavra = primeira_palavra.strip(string.punctuation);
 
-    resultado = indice[primeira_palavra];
+    resultado = indice.get(palavra, set())
 
     for palavra in palavras[1:]:
 

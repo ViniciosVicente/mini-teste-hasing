@@ -36,11 +36,15 @@ def buscar_e(indice, palavras):
 
     if not palavras:
         return [];
-    
-    resultado = indice[palavras[0]];
+
+    primeira_palavra = palavras[0].lower();
+    primeira_palavra = primeira_palavra.strip(string.punctuation);
+
+    resultado = indice[primeira_palavra];
 
     for palavra in palavras[1:]:
-
+        palavra = palavra.lower();
+        palavra = palavra.strip(string.punctuation);
         resultado = resultado & indice[palavra];
     
     resultado_e = sorted(resultado);
@@ -51,12 +55,16 @@ def buscar_ou(indice, palavras):
 
     if not palavras:
         return [];
+    primeira_palavra = palavras[0].lower();
+    primeira_palavra = primeira_palavra.strip(string.punctuation);
 
-    resultado = indice[palavras[0]];
+    resultado = indice[primeira_palavra];
 
     for palavra in palavras[1:]:
 
-        resultado = resultado or indice[palavra];
+        palavra = palavra.lower();
+        palavra = palavra.strip(string.punctuation);
+        resultado = resultado | indice[palavra];
 
     resultado_ou = sorted(resultado);
 

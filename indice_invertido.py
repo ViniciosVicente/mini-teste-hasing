@@ -68,6 +68,6 @@ def buscar_ou(indice, palavras):
 
     resultado_ou = sorted(resultado);
 
-    return resultado;
+    return resultado_ou;
     
 

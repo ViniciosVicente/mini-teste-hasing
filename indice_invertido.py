@@ -33,10 +33,21 @@ def buscar(indice, palavra):
     return resultado
 
 def buscar_e(indice, palavras):
-# Retorna as linhas que contêm TODAS as palavras.
-    
-    pass
 
+    resultado = indice[palavras[0]];
+
+    for palavra in palavras[1:]:
+
+        resultado = resultado & indice[palavra];
+
+    resultado_e = sorted(resultado);
+    return resultado_e
+        
+
+
+    
+    
+    
 def buscar_ou(indice, palavras):
 
     pass

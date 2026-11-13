@@ -5,7 +5,7 @@ with open("texto.txt", "r", encoding="utf-8") as arquivo:
     texto = arquivo.read()
 
 palavras = texto.split()
-consultas = random.choices(palavras, k=10)
+consultas = random.choices(palavras, k=100)
 
 #Varredura
 

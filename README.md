@@ -92,6 +92,24 @@ Para executar o ambiente de treinamento:
 python treino.py
 ```
 
+### 4. Executar o experimento 'Tempo de Busca'
+
+No terminal, dentro da pasta do projeto, execute:
+
+```bash
+py experimento_tempo_de_busca.py
+```
+
+### 5. Executar o experimento 'Vantagem de Indexação'
+
+No terminal, dentro da pasta do projeto, execute:
+
+```bash
+py experimento_vantagem_de_indexacao.py
+```
+
+Altere o valor de 'k' em 'consultas = random.choices(palavras, k=1000)' para alternar entre os valores de consultas. Ex: k = 1 -> 1 Consulta | k = 10 -> 10 Consultas...
+
 ## Objetivo de aprendizagem
 
 Além da implementação das funcionalidades, o projeto também foi utilizado para praticar conceitos fundamentais de Python, manipulação de textos e estruturas de dados.

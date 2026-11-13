@@ -1,4 +1,6 @@
 from indice_invertido import *
+from varredura_completa import *
+
 texto = (
 "Python e dados\n"
 "Dados e algoritmos\n"
@@ -13,3 +15,8 @@ busca_e = buscar_e(indice, ["python", "dados"])
 print(busca_e)
 busca_ou = buscar_ou(indice, ["python", "dados"]);
 print(busca_ou);
+
+# -----------------
+print("---------")
+
+varredura(texto, ["java", "python"])

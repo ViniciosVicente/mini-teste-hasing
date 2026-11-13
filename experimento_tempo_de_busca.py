@@ -5,14 +5,11 @@ with open("texto.txt", "r", encoding="utf-8") as arquivo:
     texto = arquivo.read()
 
 palavras = texto.split()
-consultas = random.choices(palavras, k=1)
+consultas = random.choices(palavras, k=1000)
 
 #Varredura
 
 inicio = time.perf_counter()
-
-for i in range(1000):
-    varredura(texto, consultas)
 
 fim = time.perf_counter()
 tempo_varredura = (fim - inicio) * 1000

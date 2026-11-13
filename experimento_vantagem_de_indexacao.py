@@ -11,9 +11,6 @@ consultas = random.choices(palavras, k=1000)
 
 inicio = time.perf_counter()
 
-for i in range(1):
-    varredura(texto, consultas)
-
 fim = time.perf_counter()
 tempo_varredura = (fim - inicio) * 1000
 

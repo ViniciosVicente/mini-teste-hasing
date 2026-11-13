@@ -1,5 +1,7 @@
 # Índice Invertido em Python
 
+<p><strong>Dupla:</strong> Marcos Vinicios Vicente dos Santos e João Pedro Santos Vieira</p>
+
 ## Sobre o projeto
 
 Este projeto implementa um **índice invertido para busca textual**, utilizando estruturas de dados da linguagem Python, como dicionários (`dict`) e conjuntos (`set`).
